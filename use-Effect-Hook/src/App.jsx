@@ -6,19 +6,20 @@ import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
-  useEffect(() => {
-    alert("Hey Welcome to my website")
-  
-  }, [])
+  const [color, setColor] = useState(0)
+
+   // Case 3:Run only when a specific dependency changes(certain value changes)
   useEffect(() => {
     alert("Count was changed")
+    setColor(color +1)
   
   }, [count])
+
   
 
   return (
     <>
-    <Navbar color ={"navy"+ "blue"}/>
+    {/* <Navbar color ={"navy"+ "blue" + color}/> */}
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
