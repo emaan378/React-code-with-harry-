@@ -2,6 +2,7 @@ import { useState ,useEffect} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <>
+    <Navbar color ={"navy"+ "blue"}/>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -42,4 +44,4 @@ function App() {
 }
 
 export default App
-// Use Effect is a react hook that used to provide side effects .Means we want whenever our component rendur something happens like facting data thorugh api etc.
+// Use Effect is a react hook that used to provide side effects .Means we want whenever our component rendur something happens like facting data thorugh api etc.mount(load)
