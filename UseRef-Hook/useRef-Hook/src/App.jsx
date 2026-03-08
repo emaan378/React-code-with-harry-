@@ -5,11 +5,11 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const ref= useRef();
+  const btnref= useRef();
   useEffect(() => {
    
     console.log(` First Rerendering .... `)
-    ref.current.style.backgrounColor="red";
+    btnref.current.style.backgroundColor="red";
     
   })
   
@@ -27,7 +27,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button  ref ={ref} onClick={() => setCount((count) => count + 1)}>
+        <button  ref ={btnref} onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
@@ -37,6 +37,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <button onClick={() => { btnref.current.style.display = "none" }}>change me</button>
     </>
   )
 }
